@@ -1,0 +1,23 @@
+Package: LearnREquivalence
+Title: Learn About Equivalence Testing - What it is, Why we need it and How it works.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Christian",
+           family = "Thurn",
+           role = c("aut", "cre"),
+           email = "christian.thurn@ifv.gess.ethz.ch",
+           comment = c(ORCID = "0000-0002-5942-3273"))
+Description: This is an interactive learnr tutorial that you can run inside R. It will 
+      walk you through the problemswith Null Hypothesis Significance Testing 
+      in case of non-significant results and present a solution called equivalence
+      testing. You learn about the basic idea as well as about specific usecases
+      of equivalence testing. This learnr tutorial accompanies a scientific article 
+      on the topic.
+License:`use_gpl3_license()` 
+URL: https://github.com/Christian-T/LearnREquivalence
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests: 
+    learnr
