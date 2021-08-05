@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = FALSE)
 #### What is this?
 This is a partly interactive tutorial on equivalence testing, written with the [`learnr` package](https://rstudio.github.io/learnr). Equivalence testing is a set of procedures to directly test for the Null-hypothesis and reject the Alternative hypothesis.
 
-This document accompanies the article "Equivalence Testing in Eight Easy Steps: an Annotated Tutorial" by Thurn & Edelsbrunner (2021) published in Psychological Methods [link](...) but you can use it without knowing the article.
+This document accompanies the article "Equivalence Testing in Eight Easy Steps: an Annotated Tutorial" by Thurn & Edelsbrunner (2021) published in ??? [link](...) but you can use it without knowing the article.
 
 This document is structured in an introductory part on equivalence testing and why we need it, an overview of several methods and ways to perform equivalence tests as well as a section on advanced aspects such as doing power analyses and choosing the relevant frames of reference.
 
@@ -363,7 +363,7 @@ In reality, power analysis and derivation of the smallest meaningful effect requ
 In the next section we present further tests to investigate equivalence with other types of data. 
 
 ## Equivalence testing: further tests
-Equivalence tests are not only developed to compare one or two means. There are also procedures to test for A) the association of categorical variables, B) differences between more than two groups, C) associations of numerical variables and D) for repeated measures. Further tests are developed and we refer interested readers to Shishkina, Farmus & Cribbie, 2018; Cribbie, Arpin-Cribbie, & Gruman, 2009; Ng, 2015 and Davidson & Cribbie, 2019. Most of these procedures work with functions from the `equivalencetests`package.
+Equivalence tests are not only developed to compare one or two means. There are also procedures to test for A) the association of categorical variables, B) differences between more than two groups, C) associations of numerical variables and D) for repeated measures. Further tests are developed and we refer interested readers to [Shishkina et al., 2018](https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/34630/lack_rel_categorical_cribbie_farmus_shishkina_tqmp_2018.pdf?sequence=1&isAllowed=y); [Cribbie et al., 2010](https://www.tandfonline.com/doi/pdf/10.1080/00220970903224552); [Ng, 2015](https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/30669/Ng_Victoria_KY_2015_Masters.pdf?sequence=2&isAllowed=y) and [Davidson & Cribbie, 2019](https://www.tandfonline.com/doi/full/10.1080/03610918.2018.1530783). Most of these procedures work with functions from the `equivalencetests` package.
 We will illustrate all tests with an example on pizza tasting: We might have eaten a lot of Pizza recently, ordered at home, due to some social distancing policies. Imagine, we tried different pizzas from different delivery services. There was the pizza made by **Pi** (who always tries to be as round as possible). The second service was **ZZ**’s pizza, (which is always very thin,) and **A**’s pizza (which is the american style).
 
 
@@ -508,7 +508,7 @@ A TOST equivalence test with default alpha = 0.05 and equivalence bounds of d = 
 #### 2. Bayes Factors
 
 If you do not stick to frequentist statistics and are somewhat familiar with Bayesian methods (or want to learn more about them), there are also Bayesian ways to test for equivalence. Bayesian methods use a slightly different approach which makes the idea of showing equivalence even more straightforward than in frequentist statistics.
-One important part of Bayesian statistics are **Bayes Factors**. Bayes Factors express the plausibility of one model relative to another one and usually serve model selection. They can range from 0 (strongest evidence for null-hypothesis) over values near 1 (evidence equal for null- and alternative hypothesis) to infinite (strongest evidence for alternative hypothesis). Usually, Bayes factors larger/smaller than 3/$\frac{1}{3}$ are considered anecdotal evidence for the alternative/null hypothesis, Bayes factors larger/smaller than 10/$\frac{1}{10}$ are are considered moderate evidence and Bayes factors larger/smaller than 30/$\frac{1}{30}$ are considered strong evidence for the alternative/null hypothesis. But these are mere conventions and should not be taken too serious. 
+One important part of Bayesian statistics are **Bayes Factors**. Bayes Factors express the plausibility of one model relative to another one and usually serve model selection. They can range from 0 (strongest evidence for null-hypothesis) over values around 1 (evidence equal for null- and alternative hypothesis) to infinite (strongest evidence for alternative hypothesis). Usually, Bayes factors larger/smaller than 3/$\frac{1}{3}$ are considered anecdotal evidence for the alternative/null hypothesis, Bayes factors larger/smaller than 10/$\frac{1}{10}$ are are considered moderate evidence and Bayes factors larger/smaller than 30/$\frac{1}{30}$ are considered strong evidence for the alternative/null hypothesis. But these are mere conventions and should not be taken too serious. 
 ```{r BayesFactors, echo=TRUE}
 
 library(BEST)
@@ -683,26 +683,26 @@ On the next page you can find more material on the workshop, our references as w
 [equivalence](https://cran.r-project.org/web/packages/equivalence/equivalence.pdf); [TOSTER](https://cran.r-project.org/web/packages/TOSTER/TOSTER.pdf);  [EQUIVNONINF](https://cran.r-project.org/web/packages/EQUIVNONINF/EQUIVNONINF.pdf); [emmeans](https://www.rdocumentation.org/packages/emmeans/versions/1.4.5/topics/emmeans);  [equivalencetests](https://github.com/cribbie/equivalencetests)
 
 #### References
-* Altman, D. G., & Bland, J. M. (1995). Statistics notes: Absence of evidence is not evidence of absence. Bmj, 311(7003), 485.
-* Campbell, H., & Lakens, D. (2019). Can we disregard the whole model? Omnibus non-inferiority testing for $R^{2}$ in multivariable linear regression and $\hat{\eta}^{2}$ in ANOVA. arXiv preprint arXiv:1905.11875.
-* Counsell, A., Cribbie, R. A., & Flora, D. B. (2019). Evaluating Equivalence Testing Methods for Measurement Invariance. Multivariate behavioral research, 1-17.
-* Cribbie, R. A., Arpin-Cribbie, C. A., & Gruman, J. A. (2009). Tests of equivalence for one-way independent groups designs. The Journal of Experimental Education, 78(1), 1-13.
-* Davidson, H., & Cribbie, R. A. (2019). A more powerful familywise error control procedure for evaluating mean equivalence. Communications in Statistics-Simulation and Computation, 1-16.
-* Etz, A., Gronau, Q. F., Dablander, F., Edelsbrunner, P. A., & Baribault, B. (2018). How to become a Bayesian in eight easy steps: An annotated reading list. Psychonomic Bulletin & Review, 25(1), 219-234.
-* Hoyda, J. J., Counsell, A., & Cribbie, R. A. Traditional and bayesian approaches for testing mean equivalence and a lack of association.
-* Kruschke, J. K. (2013). Bayesian estimation supersedes the t test. Journal of Experimental Psychology: General, 142(2), 573.
-* Lakens, D. (2017). Equivalence tests: A practical primer for t-tests, correlations, and meta-analyses. Social Psychological and Personality Science.
-* Lakens, 2017, Examining Non-Significant Results with Bayes Factors and Equivalence Tests, 29.1.2017, https://daniellakens.blogspot.com/search?q=non-significant
-* Lakens, 2017, ROPE and Equivalence Testing: Practically Equivalent? 12.2.2017 https://www.r-bloggers.com/rope-and-equivalence-testing-practically-equivalent/
+* Altman, D. G., & Bland, J. M. (1995). Statistics notes: Absence of evidence is not evidence of absence. Bmj, 311(7003), 485. [link](https://www.bmj.com/content/311/7003/485)
+* Campbell, H., & Lakens, D. (2021). Can we disregard the whole model? Omnibus non-inferiority testing for $R^{2}$ in multivariable linear regression and $\hat{\eta}^{2}$ in ANOVA. British Journal of Mathematical and Statistical Psychology, 74(1), 64-89. [link](https://bpspsychub.onlinelibrary.wiley.com/doi/pdf/10.1111/bmsp.12201)
+* Counsell, A., Cribbie, R. A., & Flora, D. B. (2019). Evaluating Equivalence Testing Methods for Measurement Invariance. Multivariate behavioral research, 1-17. [link](https://www.tandfonline.com/doi/pdf/10.1080/00273171.2019.1633617)
+* Cribbie, R. A., Arpin-Cribbie, C. A., & Gruman, J. A. (2009). Tests of equivalence for one-way independent groups designs. The Journal of Experimental Education, 78(1), 1-13. [link](https://www.tandfonline.com/doi/pdf/10.1080/00220970903224552)
+* Davidson, H., & Cribbie, R. A. (2019). A more powerful familywise error control procedure for evaluating mean equivalence. Communications in Statistics-Simulation and Computation, 1-16. [link](https://www.tandfonline.com/doi/full/10.1080/03610918.2018.1530783)
+* Etz, A., Gronau, Q. F., Dablander, F., Edelsbrunner, P. A., & Baribault, B. (2018). How to become a Bayesian in eight easy steps: An annotated reading list. Psychonomic Bulletin & Review, 25(1), 219-234. [link](https://link.springer.com/article/10.3758/s13423-017-1317-5?wt_mc=Other.Other.8.CON1172.PSBR%20VSI%20Art11%20&%20utm_medium=other%20&%20utm_source=other%20&%20utm_content=2062018%20&%20utm_campaign=8_ago1936_psbr%20vsi%20art11)
+* Hoyda, J. J., Counsell, A., & Cribbie, R. A. Traditional and bayesian approaches for testing mean equivalence and a lack of association. [link](https://www.tqmp.org/RegularArticles/vol15-1/p012/p012.pdf)
+* Kruschke, J. K. (2013). Bayesian estimation supersedes the t test. Journal of Experimental Psychology: General, 142(2), 573. [link](https://www.krigolsonteaching.com/uploads/4/3/8/4/43848243/kruschke2012jepg.pdf)
+* Lakens, D. (2017). Equivalence tests: A practical primer for t-tests, correlations, and meta-analyses. Social Psychological and Personality Science. [link](https://journals.sagepub.com/doi/full/10.1177/1948550617697177)
+* Lakens, 2017, Examining Non-Significant Results with Bayes Factors and Equivalence Tests, 29.1.2017 [link](https://daniellakens.blogspot.com/search?q=non-significant)
+* Lakens, 2017, ROPE and Equivalence Testing: Practically Equivalent? 12.2.2017 [link](https://www.r-bloggers.com/rope-and-equivalence-testing-practically-equivalent/)
 * Lenth, R., Singmann, H., Love, J., Buerkner, P., & Herve, M. (2020). emmeans: estimated marginal means. R package version 1.4. 4.
-* Mehler, D., Edelsbrunner, P. A., & Matić, K. (2019). Appreciating the Significance of Non-significant Findings in Psychology. Journal of European Psychology Students, 10(4).
-* Ng, V. K. Y. (2015). Equivalence Tests For Repeated Measures.
-* Quertemont, E. (2011). How to statistically show the absence of an effect. Psychologica Belgica, 51(2), 109-127.
-* Schloerke, Barret, JJ Allaire, and Barbara Borges. 2020. Learnr: Interactive Tutorials for R. https://CRAN.R-project.org/package=learnr.
-* Shishkina, T., Farmus, L., & Cribbie, R. A. (2018). Testing for a lack of relationship among categorical variables.
-* Wagenmakers, E. J. (2007). A practical solution to the pervasive problems ofp values. Psychonomic bulletin review, 14(5), 779-804.
+* Mehler, D., Edelsbrunner, P. A., & Matić, K. (2019). Appreciating the Significance of Non-significant Findings in Psychology. Journal of European Psychology Students, 10(4). [link](https://jeps.efpsa.org/articles/10.5334/e2019a/galley/336/download/)
+* Ng, V. K. Y. (2015). Equivalence Tests For Repeated Measures. [link](https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/30669/Ng_Victoria_KY_2015_Masters.pdf?sequence=2&isAllowed=y)
+* Quertemont, E. (2011). How to statistically show the absence of an effect. Psychologica Belgica, 51(2), 109-127. [link](https://orbi.uliege.be/bitstream/2268/97453/1/Psychologica%20Belgica%20-%20absence%20of%20an%20effect.pdf)
+* Schloerke, Barret, JJ Allaire, and Barbara Borges. 2020. Learnr: Interactive Tutorials for R. [link](https://CRAN.R-project.org/package=learnr)
+* Shishkina, T., Farmus, L., & Cribbie, R. A. (2018). Testing for a lack of relationship among categorical variables. [link](https://yorkspace.library.yorku.ca/xmlui/bitstream/handle/10315/34630/lack_rel_categorical_cribbie_farmus_shishkina_tqmp_2018.pdf?sequence=1&isAllowed=y)
+* Wagenmakers, E. J. (2007). A practical solution to the pervasive problems of p values. Psychonomic bulletin review, 14(5), 779-804. [link](https://link.springer.com/article/10.3758/BF03194105)
 * Wellek, S. (2010). Testing statistical hypotheses of equivalence and noninferiority. CRC Press.
-* Yuan, K. H., & Chan, W. (2016). Measurement invariance via multigroup SEM: Issues and solutions with chi-square-difference tests. Psychological methods, 21(3), 405.
+* Yuan, K. H., & Chan, W. (2016). Measurement invariance via multigroup SEM: Issues and solutions with chi-square-difference tests. Psychological methods, 21(3), 405. [link](https://www3.nd.edu/~kyuan/courses/sem/readpapers/Yuan-Chan_PsychMethods2016.pdf)
 
 
 #### Cite this work as 

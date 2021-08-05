@@ -4,12 +4,12 @@ citHeader("To cite reports in publications, please use:")
 
 citEntry(entry = "Misc",
     title = "LearnREquivalence",
-    author = "Christian M. Thurn",
+    author = "Christian M. Thurn, Peter Edelsbrunner",
     organization = "ETH Zürich",
     address = "Zürich",
     year = "2021",
     url = "https://github.com/Christian-T/LearnREquivalence",
-    textVersion  = paste("Thurn, C. M. (2021).",
+    textVersion  = paste("Thurn, C. M., Edelsbrunner, P. (2021).",
         "package LearnREquivalence.",
         "https://github.com/Christian-T/LearnREquivalence")
 )
