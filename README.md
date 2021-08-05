@@ -6,7 +6,7 @@ The **LearnREquivalence** package contains a *learnr* tutorial for equivalence t
 
 Installation and Usage
 ------------
-
+Make sure you have the **learnr** and **devtools** packages installed. Then execute these two lines of code:
 ``` r
 devtools::install_github("Christian-T/LearnREquivalence")
 learnr::run_tutorial("Tut_Equivalencetesting", "LearnREquivalence")
