@@ -11,9 +11,6 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 library(sortable)# for ranking questions
-library(emo) #for emojis #devtools::install_github("hadley/emo") #unfortunately not possible!
-# so far, I wanted to integrate emo::ji("balance_scale"), emo::ji("coder"), emo::ji("teacher"),
-# emo::ji("x"), emo::ji("research"), `emo::ji("crystal_ball")`, emo::ji("direct hit")
 library(TOSTER)
 library(psych)
 library(BayesFactor)
@@ -97,10 +94,11 @@ set.seed(666) #for reproducibility
 
 #Simulate random sample of data: Sample of 60 students from a population with mean 0.6 and SD 2.
 #store it in object "sample1"
-sample1 <- rnorm(n = 60, #Sample size
+sample1 <- rnorm(
+                n = 60, #Sample size
                 mean = 0.6, #Mean (expected value) in population
                 sd = 2  #Standard deviation in the population
-)
+                )
 
 #Plot a histogram of learning gains
 hist(sample1, #denote which object (i.e., variable) should be plotted
@@ -509,12 +507,15 @@ A TOST equivalence test with default alpha = 0.05 and equivalence bounds of d = 
 
 If you do not stick to frequentist statistics and are somewhat familiar with Bayesian methods (or want to learn more about them), there are also Bayesian ways to test for equivalence. Bayesian methods use a slightly different approach which makes the idea of showing equivalence even more straightforward than in frequentist statistics.
 One important part of Bayesian statistics are **Bayes Factors**. Bayes Factors express the plausibility of one model relative to another one and usually serve model selection. They can range from 0 (strongest evidence for null-hypothesis) over values around 1 (evidence equal for null- and alternative hypothesis) to infinite (strongest evidence for alternative hypothesis). Usually, Bayes factors larger/smaller than 3/$\frac{1}{3}$ are considered anecdotal evidence for the alternative/null hypothesis, Bayes factors larger/smaller than 10/$\frac{1}{10}$ are are considered moderate evidence and Bayes factors larger/smaller than 30/$\frac{1}{30}$ are considered strong evidence for the alternative/null hypothesis. But these are mere conventions and should not be taken too serious. 
-```{r BayesFactors, echo=TRUE}
+```{r BayesFactors, echo=TRUE, eval=FALSE}
 
 library(BEST)
 ttestBF( sample1, mu=0)
 
 ```
+<p align="center">
+<img src="images/PictureBEST.jpg" width="600"/>
+</p>
 
 Our Bayes factor lies at 0.57, indicating very very weak (less than anecdotal) evidence for the null-hypothesis. But it is rather inconclusive.
 
