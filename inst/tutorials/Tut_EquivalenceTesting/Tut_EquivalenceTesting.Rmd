@@ -14,7 +14,7 @@ library(sortable)# for ranking questions
 library(TOSTER)
 library(psych)
 library(BayesFactor)
-library(BEST)
+#library(BEST)
 library(DescTools)
 library(equivalencetests) #To be installed via devtools, slightly complicated:
 #install.packages("devtools")
